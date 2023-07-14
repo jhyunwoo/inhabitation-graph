@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen bg-slate-50 p-4">
       <div className="flex flex-col">
-        <div className="text-xl font-semibold">
+        <div className="text-xl font-semibold sm:text-2xl md:text-3xl lg:text-4xl">
           너...지금 <span className="text-red-600 font-extrabold">사기</span>
           당한거야
         </div>
@@ -13,7 +13,7 @@ export default function Home() {
           <div>뽕계망치팀</div>
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <div className="">
           <div className="text-lg font-semibold border-b-2">경매낙찰통계</div>
           <div className="grid grid-cols-1 gap-2 mt-4">
@@ -43,7 +43,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="mt-8">
+        <div className="">
           <div className="text-lg font-semibold border-b-2">보증사고현황</div>
           <div className="grid grid-cols-1 gap-2 mt-4">
             <Link
@@ -67,7 +67,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="mt-8">
+        <div className="">
           <div className="text-lg font-semibold border-b-2">전세가율</div>
           <div className="grid grid-cols-1 gap-2 mt-4">
             <Link
