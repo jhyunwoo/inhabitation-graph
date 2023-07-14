@@ -5,7 +5,6 @@ import { ChevronDoubleLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Metadata } from "next";
 
 export default function Area({
   params,

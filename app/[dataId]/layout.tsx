@@ -2,13 +2,12 @@ import dataIdToText from "@/lib/dataIdToText";
 import { Metadata } from "next";
 
 type Props = {
-  params: { dataId: string; areaId: string };
+  params: { dataId: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
-    title:
-      dataIdToText(decodeURI(params.dataId)) + " | " + decodeURI(params.areaId),
+    title: dataIdToText(decodeURI(params.dataId)),
   };
 }
 

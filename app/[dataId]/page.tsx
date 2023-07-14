@@ -1,20 +1,6 @@
 import dataIdToText from "@/lib/dataIdToText";
 import Link from "next/link";
 import { ChevronDoubleLeftIcon } from "@heroicons/react/24/outline";
-import { Metadata } from "next";
-
-type Props = {
-  params: { dataId: string };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  // read route params
-  const id = params.dataId;
-
-  return {
-    title: dataIdToText(id),
-  };
-}
 
 export default function Data({ params }: { params: { dataId: string } }) {
   const decodedDataId = decodeURI(params.dataId);
