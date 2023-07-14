@@ -1,7 +1,10 @@
+"use client";
+import Loading from "@/components/Loading";
 import dataIdToText from "@/lib/dataIdToText";
 import { ChevronDoubleLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Area({
   params,
@@ -11,8 +14,11 @@ export default function Area({
   const decodedDataId = decodeURI(params.dataId);
   const decodedAreaId = decodeURI(params.areaId);
 
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="bg-slate-50 p-4 w-full min-h-screen flex flex-col ">
+      {isLoading ? <Loading /> : ""}
       <Link href={`/${decodedDataId}`} className="flex items-center py-2">
         <ChevronDoubleLeftIcon className="w-6 h-6" />
         <div className="text-sm">이전</div>
@@ -30,6 +36,7 @@ export default function Area({
         className="w-full mx-auto"
         blurDataURL="/loading.png"
         placeholder="blur"
+        onLoad={() => setIsLoading(false)}
       />
     </div>
   );
