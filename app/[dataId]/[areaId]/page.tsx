@@ -24,7 +24,7 @@ export default function Area({
         <div className="text-sm">이전</div>
       </Link>
       <div className="text-xl font-bold mt-8">
-        {dataIdToText(decodedDataId)}
+        {dataIdToText(decodedDataId)} - {decodedAreaId}
       </div>
       <Image
         src={`/graph_images/${decodedDataId}/${decodedAreaId}.png`}
