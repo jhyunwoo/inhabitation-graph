@@ -93,7 +93,7 @@ export default function Home() {
               className="bg-white p-4 rounded-lg hover:shadow-xl shadow-md font-medium text-lg hover:bg-indigo-500 hover:text-white transition duration-500 hover:shadow-indigo-500"
               href={"/전세가율_연립다세대_최근3개월"}
             >
-              아파트 최근 3개월
+              연립다세대 최근 3개월
             </Link>
           </div>
         </div>
